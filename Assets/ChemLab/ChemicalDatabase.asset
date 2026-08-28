@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9211b51e94e5d3eb4c58f223e33656, type: 3}
+  m_Name: ChemicalDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::ChemLab.Scripts.ChemicalDatabase
+  chemicals:
+  - type: 0
+    displayName: Water
+    formula: "H\u2082O"
+    defaultPH: 7
+    hazard: 0
+    state: 0
+    liquidColor: {r: 0.53, g: 0.81, b: 0.98, a: 0.6}
+    hazardWarning: 
+    safetyInstructions: No special precautions needed.
+  - type: 1
+    displayName: Hydrochloric Acid
+    formula: HCl
+    defaultPH: 1
+    hazard: 3
+    state: 3
+    liquidColor: {r: 0.9, g: 0.95, b: 1, a: 0.7}
+    hazardWarning: "\u26A0 Strong Acid! Corrosive to skin and eyes."
+    safetyInstructions: Wear gloves and eye protection. Avoid inhalation of fumes.
+  - type: 2
+    displayName: Sulfuric Acid
+    formula: "H\u2082SO\u2084"
+    defaultPH: 0.5
+    hazard: 4
+    state: 0
+    liquidColor: {r: 1, g: 0.98, b: 0.8, a: 0.7}
+    hazardWarning: "\u2620 Highly Corrosive! Causes severe burns."
+    safetyInstructions: Full PPE required. Never add water to acid.
+  - type: 4
+    displayName: Acetic Acid
+    formula: "CH\u2083COOH"
+    defaultPH: 3
+    hazard: 1
+    state: 0
+    liquidColor: {r: 0.95, g: 0.95, b: 0.9, a: 0.6}
+    hazardWarning: "\u26A0 Weak acid. Pungent odour."
+    safetyInstructions: Avoid direct contact. Work in ventilated area.
+  - type: 5
+    displayName: Sodium Hydroxide
+    formula: NaOH
+    defaultPH: 14
+    hazard: 3
+    state: 3
+    liquidColor: {r: 0.9, g: 0.9, b: 0.95, a: 0.6}
+    hazardWarning: "\u26A0 Strong Base! Causes chemical burns."
+    safetyInstructions: Wear gloves and goggles. Highly exothermic when dissolved.
+  - type: 7
+    displayName: Sodium Chloride (Salt)
+    formula: NaCl
+    defaultPH: 7
+    hazard: 0
+    state: 3
+    liquidColor: {r: 0.95, g: 0.97, b: 1, a: 0.5}
+    hazardWarning: 
+    safetyInstructions: Common table salt. No special precautions.
+  - type: 8
+    displayName: Copper Sulfate
+    formula: "CuSO\u2084"
+    defaultPH: 4
+    hazard: 2
+    state: 3
+    liquidColor: {r: 0.08, g: 0.45, b: 0.86, a: 0.8}
+    hazardWarning: "\u26A0 Irritant. Toxic to aquatic life."
+    safetyInstructions: Avoid skin contact. Dispose of properly.
+  - type: 9
+    displayName: Potassium Permanganate
+    formula: "KMnO\u2084"
+    defaultPH: 7
+    hazard: 4
+    state: 3
+    liquidColor: {r: 0.5, g: 0, b: 0.5, a: 0.9}
+    hazardWarning: "\u2620 Strong oxidiser. Stains and burns skin."
+    safetyInstructions: Full PPE. Store away from flammables.
+  - type: 10
+    displayName: Hydrogen Peroxide
+    formula: "H\u2082O\u2082"
+    defaultPH: 6
+    hazard: 2
+    state: 0
+    liquidColor: {r: 0.9, g: 0.97, b: 1, a: 0.6}
+    hazardWarning: "\u26A0 Oxidiser. Can bleach skin and clothing."
+    safetyInstructions: Wear gloves. Keep away from heat.
+  - type: 11
+    displayName: Ethanol
+    formula: "C\u2082H\u2085OH"
+    defaultPH: 7
+    hazard: 1
+    state: 0
+    liquidColor: {r: 0.97, g: 0.97, b: 0.97, a: 0.5}
+    hazardWarning: "\u26A0 Flammable liquid and vapour."
+    safetyInstructions: Keep away from open flames. Ensure ventilation.
+  - type: 12
+    displayName: Phenolphthalein
+    formula: "C\u2082\u2080H\u2081\u2084O\u2084"
+    defaultPH: 7
+    hazard: 1
+    state: 0
+    liquidColor: {r: 0.95, g: 0.9, b: 0.95, a: 0.5}
+    hazardWarning: "\u26A0 pH indicator. Mildly irritant."
+    safetyInstructions: Avoid skin contact.
+  - type: 13
+    displayName: Litmus Solution
+    formula: Litmus
+    defaultPH: 7
+    hazard: 0
+    state: 0
+    liquidColor: {r: 0.55, g: 0.4, b: 0.65, a: 0.6}
+    hazardWarning: 
+    safetyInstructions: Safe pH indicator. No special precautions.
+  - type: 15
+    displayName: Empty
+    formula: 
+    defaultPH: 7
+    hazard: 0
+    state: 0
+    liquidColor: {r: 0, g: 0, b: 0, a: 0}
+    hazardWarning: 
+    safetyInstructions: 
+  reactions:
+  - reactantA: 1
+    reactantB: 5
+    productChemical: 7
+    reactionEquation: "HCl + NaOH \u2192 NaCl + H\u2082O"
+    educationalNote: Neutralisation! A strong acid and base produce a neutral salt
+      solution and water. pH rises toward 7.
+    resultColor: {r: 0.95, g: 0.97, b: 1, a: 0.5}
+    producesBubbles: 0
+    producesSteam: 1
+    producesGlow: 0
+    temperatureChange: 1
+    deltaTemperature: 12
+    resultPH: 7
+  - reactantA: 2
+    reactantB: 5
+    productChemical: 7
+    reactionEquation: "H\u2082SO\u2084 + 2NaOH \u2192 Na\u2082SO\u2084 + 2H\u2082O"
+    educationalNote: "Exothermic neutralisation. Sulfuric acid is diprotic \u2014
+      needs twice as much base!"
+    resultColor: {r: 0.9, g: 0.95, b: 1, a: 0.5}
+    producesBubbles: 0
+    producesSteam: 1
+    producesGlow: 0
+    temperatureChange: 1
+    deltaTemperature: 18
+    resultPH: 7
+  - reactantA: 4
+    reactantB: 5
+    productChemical: 7
+    reactionEquation: "CH\u2083COOH + NaOH \u2192 CH\u2083COONa + H\u2082O"
+    educationalNote: Weak acid + strong base. The resulting solution is slightly
+      basic (pH > 7) due to salt hydrolysis.
+    resultColor: {r: 0.95, g: 0.97, b: 0.95, a: 0.5}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 1
+    deltaTemperature: 6
+    resultPH: 8.9
+  - reactantA: 12
+    reactantB: 5
+    productChemical: 12
+    reactionEquation: Phenolphthalein turns pink/magenta in base
+    educationalNote: Phenolphthalein is colourless in acid, pink in base. This is
+      used in titrations to detect the endpoint!
+    resultColor: {r: 0.93, g: 0.1, b: 0.55, a: 0.7}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 1
+    temperatureChange: 0
+    deltaTemperature: 0
+    resultPH: 9
+  - reactantA: 12
+    reactantB: 1
+    productChemical: 12
+    reactionEquation: Phenolphthalein remains colourless in acid
+    educationalNote: Phenolphthalein loses its colour in acidic conditions. Add a
+      base to see it turn pink!
+    resultColor: {r: 0.95, g: 0.9, b: 0.95, a: 0.3}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 0
+    deltaTemperature: 0
+    resultPH: 3
+  - reactantA: 13
+    reactantB: 1
+    productChemical: 13
+    reactionEquation: Litmus turns red in acid
+    educationalNote: Litmus is a natural pH indicator. It turns red in acidic solutions
+      (pH < 7).
+    resultColor: {r: 0.85, g: 0.1, b: 0.1, a: 0.7}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 0
+    deltaTemperature: 0
+    resultPH: 2
+  - reactantA: 13
+    reactantB: 5
+    productChemical: 13
+    reactionEquation: Litmus turns blue in base
+    educationalNote: Litmus turns blue in basic solutions (pH > 7). Used widely as
+      a simple indicator.
+    resultColor: {r: 0.1, g: 0.2, b: 0.85, a: 0.7}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 0
+    deltaTemperature: 0
+    resultPH: 12
+  - reactantA: 10
+    reactantB: 9
+    productChemical: 0
+    reactionEquation: "2KMnO\u2084 + 5H\u2082O\u2082 + 3H\u2082SO\u2084 \u2192 2MnSO\u2084
+      + ..."
+    educationalNote: "KMnO\u2084 catalyses the decomposition of H\u2082O\u2082. Vigorous
+      bubbling of oxygen gas is observed!"
+    resultColor: {r: 0.8, g: 0.95, b: 0.8, a: 0.5}
+    producesBubbles: 1
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 1
+    deltaTemperature: 5
+    resultPH: 6
+  - reactantA: 8
+    reactantB: 0
+    productChemical: 8
+    reactionEquation: "CuSO\u2084 + H\u2082O \u2192 Cu\xB2\u207A + SO\u2084\xB2\u207B
+      (aq)"
+    educationalNote: "Copper sulfate dissolves to form a bright blue solution. Cu\xB2\u207A
+      ions are responsible for the colour!"
+    resultColor: {r: 0.08, g: 0.45, b: 0.86, a: 0.75}
+    producesBubbles: 0
+    producesSteam: 0
+    producesGlow: 0
+    temperatureChange: 0
+    deltaTemperature: 0
+    resultPH: 4

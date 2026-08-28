@@ -1,13 +1,20 @@
 {
   "dependencies": {
+    "com.termway.ide.antigravity": {
+      "version": "https://github.com/TermWay/unity-ide-antigravity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e5e981edf16a5c85f2c1a00209deee6626544bc5"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.ai.assistant": {
-      "version": "2.17.0-pre.1",
+      "version": "2.18.0-pre.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -306,6 +313,25 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.visualeffectgraph": {
+      "version": "17.3.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.shadergraph": "17.3.0",
+        "com.unity.render-pipelines.core": "17.3.0"
+      }
+    },
+    "com.unity.visualscripting": {
+      "version": "1.9.11",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.xr.androidxr-openxr": {
       "version": "1.2.0",
